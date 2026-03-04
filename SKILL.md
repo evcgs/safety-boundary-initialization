@@ -9,115 +9,168 @@ description: "Safety Boundary Initialization - A skill that triggers on first co
 
 ---
 
-## 简介
+## Quick Start
 
-这个技能基于「风险可控内授予最高权限」、「结果导向」、「不干涉过程」三大原则，帮助用户在第一次使用 AI 助手时，快速建立清晰的安全边界和协作机制。
+### First Time Conversation
 
----
+When user says:
+```
+"你好"
+"Hello"
+"第一次使用"
+"First time using"
+```
 
-## 核心功能
-
-1. **自动触发**：在第一次对话时自动激活
-2. **边界确认**：引导用户确认授权边界
-3. **结果导向**：帮助用户明确任务目标和验收标准
-4. **沟通协议**：建立清晰的沟通反馈机制
-
----
-
-## 包含文件
-
-### 1. 授权边界清单.md
-- 分级授权框架（低/中/高风险）
-- 详细的操作分类和授权方式
-- 永远禁止的操作清单
-
-### 2. 结果确认模板.md
-- 任务结果确认卡
-- 可量化的目标设定方法
-- 安全护栏和验收标准
-
-### 3. 沟通反馈机制.md
-- 什么时候打断、什么时候不干预
-- 进度汇报约定
-- 特殊场景处理
+The skill will:
+1. **Introduce itself** - Explain the purpose and value
+2. **Confirm boundaries** - Show preset boundary list for user to review and modify
+3. **Explain result template** - Show result confirmation template and explain usage
+4. **Establish communication protocol** - Confirm communication feedback mechanism
+5. **Complete confirmation** - Summarize and confirm all settings
 
 ---
 
-## 使用方法
+## Core Principles
 
-### 第一次对话时
+### 1. 风险可控内授予最高权限 (Highest Authority Within Controllable Risks)
 
-技能会自动触发，并引导用户完成以下步骤：
+First lock down risk boundaries, then give AI maximum operational space.
 
-1. **自我介绍**：说明技能的目的和价值
-2. **边界确认**：展示预设的边界清单，让用户修改确认
-3. **结果模板**：展示结果确认模板，说明使用方法
-4. **沟通协议**：确认沟通反馈机制
-5. **完成确认**：总结并确认所有设置
+```
+低风险 → 自主决策
+中风险 → 先做后说
+高风险 → 先说后做
+```
 
-### 后续使用
+### 2. 结果导向 (Result-Oriented)
 
-用户可以随时参考这三个文件，也可以根据需要进行调整。
+Humans only define quantifiable, verifiable final goals; AI decides how to achieve them.
 
----
+```
+❌ 不好："写一篇好文章"
+✅ 好："写一篇3000字的AI Agent行业分析报告，包含5个标杆案例"
+```
 
-## 三大原则
+### 3. 不干涉过程 (Non-Interference in Process)
 
-### 1. 风险可控内授予最高权限
-- 先锁死风险边界，再给 AI 最大的操作空间
-- 分级授权：低风险自主，中风险先做后说，高风险先说后做
+"Non-interference" is the norm; "interruption" is the exception. "Call me if you have problems" mode.
 
-### 2. 结果导向
-- 人类只定义可量化、可验证的最终目标
-- AI 自主决定如何实现目标
-
-### 3. 不干涉过程
-- 「不干涉」为常态，「打断」为例外
-- 「有问题再叫我」模式
-
----
-
-## 创建背景
-
-这个技能源于真实的 AI 协作实践。在与 AI 助手的长期协作中，我们发现：
-
-1. **模糊的边界导致效率低下**：用户不知道 AI 能做什么、不能做什么
-2. **缺乏结果导向导致目标偏离**：任务目标不清晰，验收标准不明确
-3. **沟通不畅导致信任问题**：不知道什么时候该问、什么时候该等
-
-通过建立清晰的边界、结果导向的目标设定、有效的沟通机制，我们可以大幅提升 AI 协作的效率和信任度。
+```
+正常执行 → 不干预
+遇到问题 → 主动打断
+需要决策 → 列出选项
+```
 
 ---
 
-## 适用场景
+## Workflow
 
-- 第一次使用 AI 助手
-- 建立新的 AI 协作关系
-- 重新梳理和优化现有协作机制
-- 团队共享 AI 助手的场景
-
----
-
-## 扩展建议
-
-这个技能可以根据不同的使用场景进行定制：
-
-- **个人使用**：简化版本，聚焦核心边界
-- **团队使用**：增加角色权限、审计日志
-- **企业使用**：增加合规检查、数据安全
-- **特定领域**：根据领域特性调整边界
-
----
-
-## 贡献
-
-欢迎提交 Issue 和 Pull Request 来改进这个技能。
+```
+User starts first conversation
+    ↓
+⚠️ Skill auto-triggers
+    ↓
+Introduce purpose and value
+    ↓
+Show authorization boundary list
+    ↓
+User reviews and modifies
+    ↓
+Explain result confirmation template
+    ↓
+Establish communication protocol
+    ↓
+Summarize and confirm all settings
+    ↓
+Done! Ready to collaborate
+```
 
 ---
 
-## 许可证
+## Usage
 
-MIT License
+### As OpenClaw Skill
+
+**Scenario 1: First time user**
+```
+"你好，我是第一次使用"
+"Hello, I'm using this for the first time"
+```
+
+**Scenario 2: Re-initialize boundaries**
+```
+"帮我重新设置一下边界"
+"Help me re-initialize the boundaries"
+```
+
+**Scenario 3: Review current settings**
+```
+"让我看看当前的边界设置"
+"Show me the current boundary settings"
+```
+
+---
+
+## Included Files
+
+### 📄 授权边界清单.md (Authorization Boundary List)
+
+Defines operation types and authorization methods by risk level:
+
+- **低风险 (Low Risk)**: Fully autonomous, no confirmation needed
+- **中风险 (Medium Risk)**: Autonomous execution, report afterwards
+- **高风险 (High Risk)**: Pre-approval required, execute after confirmation
+- **永远禁止 (Always Forbidden)**: Absolutely prohibited operations
+
+### 📄 结果确认模板.md (Result Confirmation Template)
+
+Confirmation template used before each task:
+
+- Core task goals (quantifiable, verifiable)
+- Safety guardrails (non-negotiable constraints)
+- Acceptance criteria (what counts as done)
+- Time requirements
+- Risk level and authorization
+
+### 📄 沟通反馈机制.md (Communication Feedback Mechanism)
+
+Clarifies when to interrupt, when not to:
+
+- When must interrupt
+- When completely hands-off
+- Progress reporting conventions
+- Special scenario handling
+
+---
+
+## Bundled Resources
+
+### Documents
+
+- **`README.md`** - Project overview and quick start
+- **`使用指南.md`** - Detailed usage guide
+- **`创建过程说明.md`** - Creation process and background story
+
+---
+
+## Important: Three Core Principles Checklist
+
+**Before using this skill, remember:**
+
+- [ ] **风险可控内授予最高权限** - Lock down risk boundaries first, then give maximum authority
+- [ ] **结果导向** - Define quantifiable, verifiable goals
+- [ ] **不干涉过程** - Non-interference is the norm, interruption is the exception
+
+---
+
+## Summary
+
+This skill helps you:
+
+1. **Establish clear boundaries** - What AI can do, what it can't do
+2. **Set result-oriented goals** - Quantifiable, verifiable task objectives
+3. **Build effective communication** - When to ask, when to wait
+4. **Increase trust and efficiency** - Clear rules = better collaboration
 
 ---
 
