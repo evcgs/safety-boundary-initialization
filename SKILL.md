@@ -151,6 +151,26 @@ Clarifies when to interrupt, when not to:
 - **`使用指南.md`** - Detailed usage guide
 - **`创建过程说明.md`** - Creation process and background story
 
+### Scripts (`scripts/`)
+
+- **`initialize-boundaries.mjs`** - Initialize boundary files in target workspace
+
+**Features:**
+- Copy template boundary files to workspace
+- Skip existing files
+- Support custom target directory
+
+**Usage:**
+```bash
+# Using npm
+npm run initialize
+npm run initialize -- /path/to/workspace
+
+# Direct execution
+node scripts/initialize-boundaries.mjs
+node scripts/initialize-boundaries.mjs /path/to/workspace
+```
+
 ---
 
 ## Important: Three Core Principles Checklist

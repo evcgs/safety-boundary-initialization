@@ -12,7 +12,7 @@
 
 ## 快速开始
 
-### 1. 引入技能
+### 方式一：OpenClaw 技能安装
 
 将这个技能复制到你的 OpenClaw skills 目录中：
 
@@ -20,7 +20,23 @@
 cp -r safety-boundary-initialization ~/.openclaw/skills/
 ```
 
-### 2. 第一次对话
+然后在对话中说"刷新技能"或重启 gateway。
+
+### 方式二：使用初始化脚本
+
+```bash
+# 克隆仓库
+git clone https://github.com/evcgs/safety-boundary-initialization.git
+cd safety-boundary-initialization
+
+# 运行初始化脚本（将边界文件复制到当前目录）
+npm run initialize
+
+# 或指定目标目录
+npm run initialize -- /path/to/your/workspace
+```
+
+### 第一次对话
 
 当用户第一次与 AI 助手对话时，技能会自动触发，引导用户完成设置。
 
@@ -118,11 +134,35 @@ cp -r safety-boundary-initialization ~/.openclaw/skills/
 safety-boundary-initialization/
 ├── SKILL.md                      # 技能定义文件
 ├── README.md                     # 项目说明（本文件）
+├── package.json                  # NPM package configuration
+├── .gitignore                    # Git ignore rules
 ├── 创建过程说明.md               # 创建过程和背景故事
 ├── 使用指南.md                   # 详细使用指南
 ├── 授权边界清单.md               # 授权边界清单
 ├── 结果确认模板.md               # 结果确认模板
-└── 沟通反馈机制.md               # 沟通反馈机制
+├── 沟通反馈机制.md               # 沟通反馈机制
+└── scripts/
+    └── initialize-boundaries.mjs   # 初始化脚本
+```
+
+---
+
+## 脚本使用
+
+### initialize-boundaries.mjs
+
+将边界文件复制到目标工作区。
+
+```bash
+# 使用 npm
+npm run initialize
+
+# 使用 npm 指定目录
+npm run initialize -- /path/to/workspace
+
+# 直接运行
+node scripts/initialize-boundaries.mjs
+node scripts/initialize-boundaries.mjs /path/to/workspace
 ```
 
 ---
