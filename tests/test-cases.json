@@ -1,0 +1,31 @@
+{
+  "testCases": [
+    {
+      "name": "安全配置生成测试",
+      "type": "unit",
+      "input": "生成默认的安全边界配置，包含权限控制、风险控制、数据安全三个部分",
+      "expectedOutput": {
+        "success": true,
+        "contains": ["权限控制", "风险控制", "数据安全"]
+      }
+    },
+    {
+      "name": "风险等级配置测试",
+      "type": "unit",
+      "input": "配置风险等级为高，禁止所有外部网络访问，仅允许内部API调用",
+      "expectedOutput": {
+        "success": true,
+        "contains": ["风险等级", "高", "禁止外部访问", "内部API"]
+      }
+    },
+    {
+      "name": "权限检查测试",
+      "type": "unit",
+      "input": "检查当前配置的权限范围是否符合安全规范",
+      "expectedOutput": {
+        "success": true,
+        "contains": ["权限检查", "合规", "安全规范"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "safety-boundary-initialization",
+  "name": "安全边界初始化工具",
+  "version": "1.0.0",
+  "description": "Agent安全边界初始化工具，配置安全规则、权限范围、风险控制策略",
+  "author": "OpenClaw社区",
+  "categories": ["安全", "工具", "初始化"],
+  "keywords": ["安全", "权限", "风险控制", "边界"],
+  "requirements": {
+    "openclaw": ">=1.0.0",
+    "node": ">=16.0.0"
+  },
+  "permissions": [
+    "config:read",
+    "config:write",
+    "security:manage"
+  ],
+  "install": {
+    "steps": [
+      "npm install"
+    ]
+  },
+  "homepage": "https://github.com/evcgs/safety-boundary-initialization",
+  "repository": "https://github.com/evcgs/safety-boundary-initialization.git"
+}

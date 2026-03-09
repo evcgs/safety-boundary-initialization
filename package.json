@@ -1,27 +1,17 @@
 {
   "name": "safety-boundary-initialization",
   "version": "1.0.0",
-  "description": "A skill that triggers on first conversation to help user set up safety boundaries, authorization levels, and communication protocols.",
-  "main": "scripts/initialize-boundaries.mjs",
+  "description": "Agent安全边界初始化工具，配置安全规则、权限范围、风险控制策略",
+  "main": "scripts/main.mjs",
   "scripts": {
-    "initialize": "node scripts/initialize-boundaries.mjs",
-    "init": "node scripts/initialize-boundaries.mjs"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "openclaw",
-    "skill",
     "safety",
-    "boundaries",
-    "ai",
-    "assistant"
+    "security",
+    "boundary",
+    "initialization"
   ],
-  "author": "evcgs",
-  "license": "MIT",
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/evcgs/safety-boundary-initialization.git"
-  }
+  "author": "OpenClaw Community",
+  "license": "MIT"
 }
